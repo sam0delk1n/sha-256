@@ -21,14 +21,6 @@ int main( void ) {
 ```
 
 ### How to build and run sanity-check
-```
-cd sha-256
-mkdir build
-cd build
-cmake -DCMAKE_C_COMPILER=gcc-7 -DCMAKE_CXX_COMPILER=g++-7 -DCMAKE_BUILD_TYPE=Debug ..
-make
-./hash-check
-```
 Clone the repository.
 ```bash
 git clone https://github.com/sam0delk1n/sha-256.git
