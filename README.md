@@ -49,3 +49,17 @@ cmake -DCMAKE_BUILD_TYPE=Release ../..
 make
 ./hash-check
 ```
+
+### How to build and run with Docker
+What is Docker please read here: https://docs.docker.com/.  
+
+If you don't have required compilers or tools, you can build and run this project with Docker. Before start, please delete `build` folder if you've already create it.
+```bash
+cd sha-256
+docker build -t sha-256-check .
+```
+Docker downloads Linux Bionic image with GCC-7/g++-7 and CMake that are already installed. Then Docker builds the project into `/home/app/build/Debug` and `home/app/build/Release` (inside the image) respectively and containerizes into the image with name `sha-256-check`. Now you can run SHA-256 tests.
+```bash
+docker run sha-256-check /home/app/build/Debug/hash-check
+docker run sha-256-check /home/app/build/Release/hash-check
+```
