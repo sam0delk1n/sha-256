@@ -27,9 +27,10 @@
 
 #include <cstdint>
 #include <cstring>
-#include <string>
 #include <array>
 #include <vector>
+#include <string>
+#include <sstream>
 #include <ios>
 #include <iomanip>
 
