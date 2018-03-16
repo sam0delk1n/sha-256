@@ -23,11 +23,9 @@
 //
 //==============================================================================================================================
 
-#include "except_c.hpp"
 #include "../include/sha256_c.hpp"
+#include "except_c.hpp"
 
-//#include <iomanip>
-//#include <ios>
 #include <iostream>
 #include <string>
 #include <exception>
