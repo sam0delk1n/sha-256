@@ -6,6 +6,9 @@ It's a header-only library so just put `sha256_c.hpp` into your `.cpp` file.
 ```cpp
 #include "include/sha256_c.hpp"
 
+#include <string>
+#include <iostream>
+
 using namespace std;
 using namespace smd::hash;
 
@@ -13,12 +16,13 @@ int main( void ) {
     const string cInput { "Hello, World!" };         // The input string.
     sha256_c::hash_t hash;                           // The variable for 256-bit hash in binary format.
     hash = sha256( cInput );                         // Compute hash.
-    const string cHashStr { bytesToHexStr( hash ) }; // Convert the binary hash to the string format.
-    cout << cHashStr << endl;                        // Print number to the terminal output.
+    const string cHashStr { bytesToHexStr( hash ) }; // Convert the binary hash to string format.
+    cout << cHashStr << endl;                        // Print the string to the terminal output.
 
     return 0;
 }
 ```
+You can find full code of this example in `examples/main.cpp`.
 
 ## How to build and run sanity-check
 ### Clone the repo
